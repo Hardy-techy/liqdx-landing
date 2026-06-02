@@ -202,8 +202,8 @@ function AwwwardsCard({ card, i }: { card: any, i: number }) {
 function AwwwardsCoreEngine() {
   const cards = [
     { num: '01', title: 'Intent Engine', desc: 'Skip the complex interfaces. Simply tell the AI your intent—like "Swap 10 USDC to EURC"—and our conversational agent securely prepares and executes the transaction for you.' },
-    { num: '02', title: 'Unified Liquidity', desc: 'Operate effortlessly across Ethereum, Base, Arbitrum, and Optimism. Bridge and swap assets instantly using robust infrastructure powered by Circle CCTP.' },
-    { num: '03', title: 'Zero Friction', desc: 'You do not need to hold native gas tokens like ETH, AVAX, or SOL. Liqdx fully sponsors transaction fees via Circle Gas Station, creating a truly Web2-like experience for Web3.' },
+    { num: '02', title: 'Unified Liquidity', desc: 'Operate effortlessly across Ethereum, Base, Arbitrum, and Arc. Bridge and swap assets instantly using robust infrastructure powered by Circle CCTP.' },
+    { num: '03', title: 'Zero Friction', desc: 'Experience blazing-fast, frictionless bridging through Circle CCTP. We leverage the Forwarding Service to automate destination mints, meaning you never need native gas tokens.' },
     { num: '04', title: 'Instantly Social', desc: 'Sending funds is as easy as tagging a friend. Type "Send 15 USDC to @username" and Liqdx automatically resolves the Twitter handle to their wallet and executes securely.' },
   ];
 
