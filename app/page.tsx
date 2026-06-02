@@ -111,11 +111,11 @@ function HeroSequence() {
                   <div className="bridge-chain"><NetworkBase size={24}/> <span>Base</span></div>
                 </div>
                 <div className="bridge-details">
-                  <div className="detail-row"><span>Action</span> <strong>Transfer</strong></div>
-                  <div className="detail-row"><span>Amount</span> <strong>500.00 USDC</strong></div>
-                  <div className="detail-row"><span>Network Fee</span> <strong className="highlight">Sponsored</strong></div>
-                  <div className="detail-row"><span>Route</span> <strong>Circle CCTP</strong></div>
-                  <div className="detail-row"><span>Est. Time</span> <strong>~12 seconds</strong></div>
+                  <div className="detail-row"><span>Action</span> <span>Transfer</span></div>
+                  <div className="detail-row"><span>Amount</span> <span>500.00 USDC</span></div>
+                  <div className="detail-row"><span>Network Fee</span> <span className="highlight">Sponsored</span></div>
+                  <div className="detail-row"><span>Route</span> <span>Circle CCTP</span></div>
+                  <div className="detail-row"><span>Est. Time</span> <span>~12 seconds</span></div>
                 </div>
               </motion.div>
             )}
@@ -147,8 +147,8 @@ function HeroSequence() {
                 </div>
 
                 <div className="bridge-details">
-                  <div className="detail-row"><span>Rate</span> <strong>1 USDC = 0.9424 EURC</strong></div>
-                  <div className="detail-row"><span>Fee</span> <strong>0.1%</strong></div>
+                  <div className="detail-row"><span>Rate</span> <span>1 USDC = 0.9424 EURC</span></div>
+                  <div className="detail-row"><span>Fee</span> <span>0.1%</span></div>
                 </div>
                 
                 <div style={{ marginTop: '20px', paddingTop: '16px', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.85rem' }}>
@@ -255,8 +255,8 @@ function FeatureList() {
             <motion.div 
               key={i}
               className={`asym-grid ${isRight ? 'reverse' : ''}`}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-20%" }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               style={{ 
@@ -266,20 +266,20 @@ function FeatureList() {
                 alignItems: 'center'
               }}
             >
-              <div className="asym-left">
+              <motion.div className="asym-left" initial={{ opacity: 0, x: isRight ? 100 : -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}>
                 <h2 className="cap-huge-title liquid-hover" style={{ fontWeight: 800 }}>
                   <span className="text-gradient-dark">{f.title1}</span> <br/>
                   <span className="aww-serif" style={{ color: 'var(--text)' }}>{f.title2}</span>
                 </h2>
-              </div>
-              <div className="asym-right">
+              </motion.div>
+              <motion.div className="asym-right" initial={{ opacity: 0, x: isRight ? -100 : 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}>
                 <div className="cap-num" style={{ color: 'var(--accent)', fontSize: '1rem', padding: '6px 14px', background: 'rgba(0, 97, 240, 0.08)', borderRadius: '100px', width: 'fit-content', marginBottom: '20px', border: '1px solid rgba(0, 97, 240, 0.2)' }}>
                   {f.num}
                 </div>
                 <p className="cap-desc" style={{ fontSize: '1.35rem', color: 'var(--muted)', marginTop: 0, maxWidth: '400px' }}>
                   {f.desc}
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           );
         })}
@@ -296,8 +296,8 @@ function VaultAndCredits() {
           <motion.h2 
             className="cap-huge-title liquid-hover" 
             style={{ fontWeight: 800, paddingBottom: '0.2em' }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             viewport={{ once: true, margin: "-30%" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -307,8 +307,8 @@ function VaultAndCredits() {
           <motion.p 
             className="cap-desc" 
             style={{ marginTop: '2rem' }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-30%" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
@@ -318,10 +318,10 @@ function VaultAndCredits() {
         <div className="asym-right" style={{ display: 'flex', justifyContent: 'center' }}>
           <motion.div 
             className="glass-card" 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, rotateY: 30, x: 100, transformPerspective: 1000 }}
+            whileInView={{ opacity: 1, rotateY: 0, x: 0 }}
             viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             style={{ minHeight: 'auto', padding: '3rem', width: '100%', maxWidth: '500px', boxShadow: '0 40px 100px -20px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.7)' }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
@@ -354,10 +354,10 @@ function IdentityAndLedger() {
         <div className="asym-left" style={{ display: 'flex', justifyContent: 'center' }}>
           <motion.div 
             className="glass-card" 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, rotateX: 45, y: 100, transformPerspective: 1200 }}
+            whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             style={{ minHeight: 'auto', padding: '0', width: '100%', maxWidth: '500px', boxShadow: '0 40px 100px -20px rgba(0,0,0,0.05)' }}
           >
             {/* Header: Twitter Profile */}
@@ -398,8 +398,8 @@ function IdentityAndLedger() {
           <motion.h2 
             className="cap-huge-title liquid-hover" 
             style={{ fontWeight: 800, paddingBottom: '0.2em' }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 50, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
             viewport={{ once: true, margin: "-30%" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >

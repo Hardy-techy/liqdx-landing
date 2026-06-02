@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light only;
   --bg: #FAFAFA;
   --text: #0A0A0A;
   --muted: #666666;
@@ -864,15 +865,13 @@ h1 {
 }
 .aww-engine-section {
   padding: 20vh 5vw;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(40px);
+  background: transparent;
   position: relative;
   z-index: 2;
 }
 .aww-engine-section.spotlight-layout {
-  padding: 15vh 5vw;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(40px);
+  padding: 15vh 5vw 35vh 5vw;
+  background: transparent;
   position: relative;
   z-index: 2;
   display: flex;
@@ -933,11 +932,12 @@ h1 {
   display: block;
 }
 .aww-card-title {
-  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 .aww-card-desc {
   font-size: 1.1rem;
@@ -1000,7 +1000,7 @@ h1 {
 .aww-card-title {
   font-size: 5rem;
   font-weight: 800;
-  letter-spacing: -0.05em;
+  letter-spacing: normal;
   margin-bottom: 2rem;
   line-height: 1;
   color: var(--text);
@@ -1017,7 +1017,6 @@ h1 {
   .aww-watermark { font-size: 20rem; }
   .aww-card-wrapper { justify-content: center !important; }
 }
-
 .bento-title {
   font-size: 2.2rem;
   font-weight: 700;
