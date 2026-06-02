@@ -174,7 +174,7 @@ function AwwwardsCard({ card, i }: { card: any, i: number }) {
       className="aww-spotlight-card"
       initial="inactive"
       whileInView="active"
-      viewport={{ margin: "-45% 0px -45% 0px" }}
+      viewport={{ margin: "-49% 0px -49% 0px" }}
       variants={{
         inactive: { opacity: 0.3, scale: 0.95, filter: 'blur(3px)' },
         active: { opacity: 1, scale: 1, filter: 'blur(0px)' }

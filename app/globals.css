@@ -870,7 +870,7 @@ h1 {
   z-index: 2;
 }
 .aww-engine-section.spotlight-layout {
-  padding: 15vh 5vw 20vh 5vw;
+  padding: 15vh 5vw 10vh 5vw;
   background: transparent;
   position: relative;
   z-index: 2;
@@ -902,8 +902,12 @@ h1 {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 3rem;
   width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   will-change: transform, opacity, filter;
   box-shadow: 0 10px 30px rgba(0,0,0,0.02);
@@ -927,7 +931,7 @@ h1 {
   font-family: 'Instrument Serif', serif;
   font-size: 2rem;
   color: var(--accent);
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
   font-style: italic;
   display: block;
 }
@@ -1000,7 +1004,7 @@ h1 {
 .aww-card-title {
   font-size: 5rem;
   font-weight: 800;
-  letter-spacing: normal;
+  letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1;
