@@ -927,7 +927,7 @@ h1 {
   font-family: 'Instrument Serif', serif;
   font-size: 2rem;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-style: italic;
   display: block;
 }
@@ -998,15 +998,16 @@ h1 {
   will-change: transform;
 }
 .aww-card-title {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: 5rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: normal;
+  margin-top: 0;
   margin-bottom: 1.5rem;
-  line-height: 1.1;
+  line-height: 1;
   color: var(--text);
 }
 .aww-card-desc {
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   color: var(--muted);
   line-height: 1.5;
 }
